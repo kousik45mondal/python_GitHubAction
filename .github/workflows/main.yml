@@ -1,16 +1,11 @@
 jobs:
-  run-scripts:
+  job1:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Run testcase1
-        run: python testcase1.py
-      - name: Run testcase2
-        run: python testcase2.py
+      - uses: actions/checkout@v4
+      - run: python testcase1.py
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python testcase2.py
