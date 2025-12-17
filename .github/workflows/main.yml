@@ -1,0 +1,4 @@
+  - name: Run testcase1
+    run: python testcase1.py
+  - name: Run testcase2
+    run: python testcase2.py
